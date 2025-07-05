@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 E-commerce Market Research & Customer Segmentation Analysis
 Main Orchestrator Script
@@ -214,13 +213,6 @@ def main():
         # Initialize and run pipeline
         pipeline = RetailAnalysisPipeline()
         pipeline.run_full_analysis()
-        
-        print("\n[SUCCESS] Your e-commerce analysis is ready for Upwork portfolio!")
-        print("\n📋 Next Steps:")
-        print("   1. Review generated reports in outputs/reports/")
-        print("   2. Check visualizations in outputs/visualizations/")
-        print("   3. Open dashboard at outputs/dashboards/retail_analytics_dashboard.html")
-        print("   4. Upload to GitHub and link to your Upwork profile")
         
     except Exception as e:
         logger.error(f"Main execution failed: {str(e)}")

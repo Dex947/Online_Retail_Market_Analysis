@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Market Trends Analysis Module
 

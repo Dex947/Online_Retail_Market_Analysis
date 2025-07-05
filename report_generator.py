@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Report Generator Module
 
@@ -934,17 +933,6 @@ monthly_groups = [df[df['Month'] == m]['Revenue'] for m in range(1, 13)]
 f_stat, p_value = stats.f_oneway(*monthly_groups)
 ```
 
-### 4.2 Model Quality Metrics
-**Clustering Validation:**
-- Silhouette Score: Measures cluster cohesion and separation
-- Inertia: Within-cluster sum of squares
-- Calinski-Harabasz Index: Ratio of between/within cluster dispersion
-
-**Significance Thresholds:**
-- α = 0.05 for all statistical tests
-- Confidence interval: 95%
-- Effect size consideration for practical significance
-
 ## 5. Visualization Strategy
 
 ### 5.1 Chart Types and Purpose
@@ -1016,46 +1004,21 @@ def validate_processed_data(df):
     return all(validations.values())
 ```
 
-### 7.2 Reproducibility Measures
-- Fixed random seeds for clustering
-- Version-controlled code repository
-- Documented parameter choices
-- Comprehensive logging
+## 7. Future Enhancements
 
-## 8. Limitations and Assumptions
-
-### 8.1 Data Limitations
-- **Temporal Scope:** 13-month period may not capture full seasonal cycles
-- **Geographic Scope:** Primarily UK-based, limited international insights
-- **Product Categories:** Simplified keyword-based categorization
-- **Customer Demographics:** No age, gender, or income data available
-
-### 8.2 Methodological Assumptions
-- **RFM Validity:** Assumes RFM metrics are primary drivers of customer value
-- **Clustering Assumption:** Assumes spherical clusters (K-means limitation)
-- **Seasonality:** Assumes consistent seasonal patterns year-over-year
-- **Stationarity:** Assumes underlying business model remains constant
-
-### 8.3 Statistical Assumptions
-- **Normality:** Some tests assume normal distribution of residuals
-- **Independence:** Assumes transactions are independent events
-- **Homoscedasticity:** Assumes constant variance in error terms
-
-## 9. Future Enhancements
-
-### 9.1 Data Enrichment
+### 7.1 Data Enrichment
 - Customer demographic integration
 - Competitive pricing data
 - Marketing campaign data
 - External economic indicators
 
-### 9.2 Advanced Analytics
+### 7.2 Advanced Analytics
 - Predictive modeling (customer lifetime value)
 - Recommendation systems
 - Real-time analysis pipeline
 - A/B testing framework
 
-### 9.3 Technical Improvements
+### 7.3 Technical Improvements
 - Automated data pipeline
 - Interactive dashboard with real-time updates
 - API integration for live data feeds
