@@ -1,0 +1,3 @@
+Cluster_Name,Customer_Count,Recency_mean,Recency_median,Frequency_mean,Frequency_median,Monetary_mean,Monetary_median,Monetary_sum,AvgOrderValue_mean,AvgOrderValue_median,UniqueProducts_mean,UniqueProducts_median,Customer_Percentage,Revenue_Percentage
+Loyal Customers,4317,92.99,51.0,3.97,2.0,1590.88,664.0,6867850.32,373.68,289.96,58.92,35.0,99.58,78.33
+VIP Champions,18,24.39,3.0,70.44,57.5,105559.3,75032.84,1900067.33,10807.4,1717.48,660.67,601.5,0.42,21.67

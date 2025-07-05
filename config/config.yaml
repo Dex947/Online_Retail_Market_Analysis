@@ -1,0 +1,310 @@
+# E-commerce Market Research & Customer Segmentation Analysis
+# Configuration File
+# Author: Bryant M.
+# Date: July 2025
+
+# Project Information
+project:
+  name: "E-commerce Market Research & Customer Segmentation Analysis"
+  version: "1.0.0"
+  author: "Bryant M."
+  description: "Comprehensive analysis of online retail data for customer segmentation and market insights"
+  
+# Data Configuration
+data:
+  # Input data paths
+  raw_data_path: "data/raw/online_retail.xlsx"
+  processed_data_path: "data/processed/"
+  external_data_path: "data/external/"
+  
+  # Data column mappings
+  date_column: "InvoiceDate"
+  customer_id_column: "CustomerID"
+  invoice_column: "InvoiceNo"
+  product_column: "Description"
+  stock_code_column: "StockCode"
+  quantity_column: "Quantity"
+  price_column: "UnitPrice"
+  country_column: "Country"
+  
+  # Data processing parameters
+  remove_negative_quantities: true
+  remove_zero_prices: true
+  remove_missing_customer_ids: true
+  outlier_threshold_percentile: 99.9
+  min_stock_code_length: 5
+  
+  # Feature engineering
+  create_revenue_feature: true
+  create_date_features: true
+  create_product_categories: true
+  create_invoice_aggregations: true
+
+# Analysis Configuration
+analysis:
+  # RFM Analysis
+  rfm:
+    quantiles: 5
+    recency_direction: "ascending"  # Lower recency is better
+    frequency_direction: "descending"  # Higher frequency is better
+    monetary_direction: "descending"  # Higher monetary is better
+    
+  # Customer Segmentation
+  segmentation:
+    # Traditional RFM segments
+    use_traditional_rfm: true
+    
+    # Machine Learning clustering
+    use_ml_clustering: true
+    cluster_algorithm: "kmeans"
+    cluster_range: [2, 8]
+    standardize_features: true
+    random_state: 42
+    n_init: 10
+    
+    # Clustering features
+    clustering_features:
+      - "Recency"
+      - "Frequency" 
+      - "Monetary"
+      - "AvgOrderValue"
+      - "UniqueProducts"
+    
+    # Optimization method
+    optimization_method: "silhouette"  # Options: silhouette, elbow, gap
+    
+  # Market Trends Analysis
+  market_trends:
+    # Temporal analysis
+    analyze_daily_trends: true
+    analyze_weekly_trends: true
+    analyze_monthly_trends: true
+    analyze_quarterly_trends: true
+    
+    # Seasonal analysis
+    seasonal_analysis: true
+    holiday_analysis: true
+    day_of_week_analysis: true
+    
+    # Growth analysis
+    calculate_growth_rates: true
+    correlation_analysis: true
+    
+  # Product Analysis
+  product_analysis:
+    # ABC analysis
+    abc_analysis: true
+    abc_thresholds: [80, 95, 100]  # Cumulative revenue percentages
+    
+    # Pareto analysis
+    pareto_analysis: true
+    pareto_threshold: 80  # Percentage of revenue
+    
+    # Category analysis
+    category_analysis: true
+    top_products_count: 10
+    
+  # Geographic analysis
+  geographic_analysis: true
+  
+# Visualization Configuration
+visualization:
+  # General settings
+  figure_size: [12, 8]
+  dpi: 300
+  color_palette: "husl"
+  style: "seaborn-v0_8"
+  
+  # Chart types to generate
+  charts:
+    customer_segmentation:
+      - "rfm_3d_scatter"
+      - "segment_distribution_pie"
+      - "segment_performance_bar"
+      - "cluster_pca_plot"
+    
+    revenue_trends:
+      - "monthly_revenue_line"
+      - "daily_revenue_scatter"
+      - "growth_rate_bar"
+      - "weekly_pattern_line"
+    
+    seasonal_analysis:
+      - "monthly_seasonality_bar"
+      - "seasonality_index_line"
+      - "quarterly_comparison_bar"
+      - "day_of_week_bar"
+    
+    product_performance:
+      - "top_products_bar"
+      - "category_performance_bar"
+      - "abc_analysis_pie"
+      - "pareto_chart"
+    
+    geographic_analysis:
+      - "country_revenue_bar"
+      - "geographic_distribution_pie"
+  
+  # Interactive dashboard
+  dashboard:
+    create_interactive: true
+    dashboard_title: "E-commerce Retail Analytics Dashboard"
+    include_filters: true
+    auto_refresh: false
+
+# Output Configuration
+output:
+  # Output paths
+  reports_path: "outputs/reports/"
+  visualizations_path: "outputs/visualizations/"
+  dashboards_path: "outputs/dashboards/"
+  logs_path: "logs/"
+  
+  # Report formats
+  reports:
+    executive_summary:
+      format: "html"
+      include_charts: true
+      template: "executive"
+    
+    technical_report:
+      format: "html"
+      include_methodology: true
+      include_code_snippets: true
+      template: "technical"
+    
+    methodology_documentation:
+      format: "markdown"
+      include_references: true
+      version_control: true
+  
+  # Visualization formats
+  chart_formats: ["png", "svg"]
+  chart_quality: "high"
+  
+  # Dashboard configuration
+  dashboard_format: "html"
+  dashboard_responsive: true
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_to_file: true
+  log_file: "logs/analysis.log"
+  log_to_console: true
+  
+  # Component logging levels
+  components:
+    data_preprocessing: "INFO"
+    customer_segmentation: "INFO"
+    market_analysis: "INFO"
+    visualization: "INFO"
+    report_generator: "INFO"
+
+# Performance Configuration
+performance:
+  # Memory management
+  chunk_size: 10000
+  low_memory: false
+  
+  # Parallel processing
+  n_jobs: -1  # Use all available cores
+  parallel_backend: "threading"
+  
+  # Caching
+  cache_processed_data: true
+  cache_directory: "cache/"
+
+# Quality Assurance
+quality_assurance:
+  # Data validation
+  validate_data_quality: true
+  min_data_retention_rate: 70  # Minimum percentage of original data to retain
+  
+  # Statistical validation
+  significance_threshold: 0.05
+  confidence_level: 0.95
+  
+  # Model validation
+  min_silhouette_score: 0.3
+  cross_validation: true
+  
+  # Output validation
+  check_output_completeness: true
+  validate_chart_generation: true
+
+# Development Configuration
+development:
+  # Debug settings
+  debug_mode: false
+  verbose_output: false
+  save_intermediate_results: true
+  
+  # Testing
+  run_tests: false
+  test_data_subset: 1000  # Number of rows for testing
+  
+  # Profiling
+  profile_performance: false
+  memory_profiling: false
+
+# Business Rules
+business_rules:
+  # Customer definition
+  min_customer_orders: 1
+  max_days_inactive: 365
+  
+  # Product filtering
+  min_product_revenue: 1.0
+  exclude_gift_cards: true
+  exclude_postage: true
+  
+  # Revenue calculation
+  include_shipping: false
+  tax_included: true
+  currency: "GBP"
+  
+  # Seasonal definitions
+  holiday_months: [11, 12]  # November, December
+  peak_season: [10, 11, 12]  # Q4
+  off_season: [1, 2, 3]     # Q1
+
+# Advanced Analytics
+advanced_analytics:
+  # Predictive modeling
+  enable_forecasting: false
+  forecast_horizon: 90  # days
+  
+  # Statistical testing
+  enable_hypothesis_testing: true
+  multiple_testing_correction: "bonferroni"
+  
+  # Feature importance
+  calculate_feature_importance: true
+  feature_selection: false
+  
+  # Anomaly detection
+  detect_anomalies: false
+  anomaly_threshold: 2.5  # standard deviations
+
+# Integration Settings
+integration:
+  # External APIs
+  enable_api_integration: false
+  
+  # Database connections
+  database_enabled: false
+  
+  # Cloud storage
+  cloud_storage_enabled: false
+  
+  # Email notifications
+  send_email_reports: false
+
+# Metadata
+metadata:
+  created_date: "2025-07-05"
+  last_modified: "2025-07-05"
+  schema_version: "1.0"
+  config_description: "Comprehensive configuration for e-commerce retail analysis pipeline"

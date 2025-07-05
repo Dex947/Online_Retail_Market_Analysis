@@ -1,0 +1,18 @@
+CUSTOMER SEGMENTATION ANALYSIS REPORT
+==================================================
+
+Generated: 2025-07-05 17:42:39
+
+SUMMARY STATISTICS
+--------------------
+Total Customers Analyzed: 4,335
+Total Revenue: £8,767,917.65
+Traditional RFM Segments: 9
+Cluster-based Segments: 2
+
+STATISTICAL VALIDATION
+--------------------
+ANOVA F-statistic: 5547.9988
+ANOVA p-value: 0.000000
+Segments significantly different: True
+

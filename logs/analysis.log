@@ -1,0 +1,308 @@
+2025-07-05 17:06:13,432 - INFO - Configuration loaded from config/config.yaml
+2025-07-05 17:06:13,433 - INFO - Project directories verified
+2025-07-05 17:06:13,439 - INFO - Retail Analysis Pipeline initialized successfully
+2025-07-05 17:06:13,440 - INFO - ============================================================
+2025-07-05 17:06:13,440 - INFO - STARTING E-COMMERCE RETAIL ANALYSIS PIPELINE
+2025-07-05 17:06:13,441 - INFO - ============================================================
+2025-07-05 17:06:13,441 - INFO - Step 1: Data Preprocessing and Cleaning
+2025-07-05 17:06:13,441 - INFO - Loading data from data/raw/online_retail.xlsx
+2025-07-05 17:08:23,950 - INFO - Performing data quality assessment...
+2025-07-05 17:08:26,469 - INFO - Starting data cleaning process...
+2025-07-05 17:08:28,480 - INFO - Engineering additional features...
+2025-07-05 17:08:29,935 - INFO - ==================================================
+2025-07-05 17:08:29,935 - INFO - DATA PROCESSING SUMMARY
+2025-07-05 17:08:29,936 - INFO - ==================================================
+2025-07-05 17:08:29,936 - INFO - Original rows: 541,909
+2025-07-05 17:08:29,937 - INFO - Processed rows: 33,226
+2025-07-05 17:08:29,938 - INFO - Data retention: 6.1%
+2025-07-05 17:08:29,939 - INFO - Unique customers: 3,272
+2025-07-05 17:08:29,944 - INFO - Unique products: 872
+2025-07-05 17:08:29,946 - INFO - Date range: 2010-12-01 08:26:00 to 2011-12-09 12:20:00
+2025-07-05 17:08:29,947 - INFO - Total revenue: �698,755.92
+2025-07-05 17:08:29,947 - INFO - ==================================================
+2025-07-05 17:08:29,966 - INFO - Step 2: Customer Segmentation Analysis
+2025-07-05 17:08:29,966 - INFO - ==================================================
+2025-07-05 17:08:29,967 - INFO - STARTING CUSTOMER SEGMENTATION ANALYSIS
+2025-07-05 17:08:29,967 - INFO - ==================================================
+2025-07-05 17:08:29,968 - INFO - Calculating RFM metrics...
+2025-07-05 17:08:29,969 - INFO - Analysis date set to: 2011-12-10 12:20:00
+2025-07-05 17:08:30,690 - INFO - Creating RFM quintile segments...
+2025-07-05 17:08:30,849 - INFO - Performing K-means clustering analysis...
+2025-07-05 17:09:16,999 - INFO - Analyzing customer segments...
+2025-07-05 17:09:17,484 - INFO - ==================================================
+2025-07-05 17:09:17,484 - INFO - CUSTOMER SEGMENTATION COMPLETED SUCCESSFULLY
+2025-07-05 17:09:17,484 - INFO - ==================================================
+2025-07-05 17:09:17,485 - ERROR - Pipeline failed with error: 'segment_summary'
+2025-07-05 17:09:17,485 - ERROR - Main execution failed: 'segment_summary'
+2025-07-05 17:28:45,672 - INFO - Configuration loaded from config/config.yaml
+2025-07-05 17:28:45,685 - INFO - Project directories verified
+2025-07-05 17:28:45,688 - INFO - Retail Analysis Pipeline initialized successfully
+2025-07-05 17:28:45,688 - INFO - ============================================================
+2025-07-05 17:28:45,689 - INFO - STARTING E-COMMERCE RETAIL ANALYSIS PIPELINE
+2025-07-05 17:28:45,689 - INFO - ============================================================
+2025-07-05 17:28:45,690 - INFO - Step 1: Data Preprocessing and Cleaning
+2025-07-05 17:28:45,690 - INFO - Loading data from data/raw/online_retail.xlsx
+2025-07-05 17:30:24,888 - INFO - [OK] Raw data loaded successfully. Shape: (541909, 8)
+2025-07-05 17:30:24,889 - INFO - [OK] Columns: ['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'UnitPrice', 'CustomerID', 'Country']
+2025-07-05 17:30:24,889 - INFO - Performing data quality assessment...
+2025-07-05 17:30:26,553 - INFO - [OK] Data quality assessment completed
+2025-07-05 17:30:26,554 - INFO - Starting data cleaning process...
+2025-07-05 17:30:26,607 - INFO - [OK] Converted InvoiceDate to datetime
+2025-07-05 17:30:26,670 - INFO - [OK] Removed 135080 rows with missing CustomerID
+2025-07-05 17:30:26,726 - INFO - [OK] Removed rows with negative/zero quantities. Remaining: 397924
+2025-07-05 17:30:26,782 - INFO - [OK] Removed rows with zero/negative prices. Remaining: 397884
+2025-07-05 17:30:27,731 - INFO - Engineering additional features...
+2025-07-05 17:30:32,543 - INFO - [OK] Feature engineering completed
+2025-07-05 17:30:32,544 - INFO - [OK] Added features: Revenue, Date components, Invoice stats, Product categories
+2025-07-05 17:30:32,561 - INFO - [OK] Data cleaning completed. Final shape: (396482, 20)
+2025-07-05 17:30:32,561 - INFO - [OK] Data reduction: 26.8%
+2025-07-05 17:30:43,718 - INFO - [OK] Processed data saved to data\processed\cleaned_retail_data.csv
+2025-07-05 17:30:43,735 - INFO - [OK] Quality report saved to data\processed\data_quality_report.txt
+2025-07-05 17:30:45,437 - INFO - [OK] Summary statistics saved to data\processed\data_summary_stats.csv
+2025-07-05 17:30:45,490 - INFO - ==================================================
+2025-07-05 17:30:45,491 - INFO - DATA PROCESSING SUMMARY
+2025-07-05 17:30:45,491 - INFO - ==================================================
+2025-07-05 17:30:45,492 - INFO - Original rows: 541,909
+2025-07-05 17:30:45,492 - INFO - Processed rows: 396,482
+2025-07-05 17:30:45,492 - INFO - Data retention: 73.2%
+2025-07-05 17:30:45,523 - INFO - Unique customers: 4,335
+2025-07-05 17:30:45,553 - INFO - Unique products: 3,661
+2025-07-05 17:30:45,556 - INFO - Date range: 2010-12-01 08:26:00 to 2011-12-09 12:50:00
+2025-07-05 17:30:45,558 - INFO - Total revenue: £8,767,917.65
+2025-07-05 17:30:45,558 - INFO - ==================================================
+2025-07-05 17:30:45,580 - INFO - ✓ Data processed successfully. Shape: (396482, 20)
+2025-07-05 17:30:45,580 - INFO - Step 2: Customer Segmentation Analysis
+2025-07-05 17:30:45,581 - INFO - ==================================================
+2025-07-05 17:30:45,581 - INFO - STARTING CUSTOMER SEGMENTATION ANALYSIS
+2025-07-05 17:30:45,581 - INFO - ==================================================
+2025-07-05 17:30:45,582 - INFO - Calculating RFM metrics...
+2025-07-05 17:30:45,603 - INFO - Analysis date set to: 2011-12-10 12:50:00
+2025-07-05 17:30:47,348 - INFO - [OK] RFM metrics calculated for 4335 customers
+2025-07-05 17:30:47,349 - INFO - [OK] Recency range: 1 to 374 days
+2025-07-05 17:30:47,350 - INFO - [OK] Frequency range: 1 to 206 orders
+2025-07-05 17:30:47,351 - INFO - [OK] Monetary range: £3.75 to £279138.02
+2025-07-05 17:30:47,351 - INFO - Creating RFM quintile segments...
+2025-07-05 17:30:47,799 - INFO - [OK] RFM quintile segments created
+2025-07-05 17:30:47,800 - INFO - Performing K-means clustering analysis...
+2025-07-05 17:31:46,722 - INFO - [OK] Optimal number of clusters: 2
+2025-07-05 17:31:46,754 - INFO - [OK] Best silhouette score: 0.918
+2025-07-05 17:31:47,618 - INFO - [OK] Clustering analysis completed
+2025-07-05 17:31:47,619 - INFO - Analyzing customer segments...
+2025-07-05 17:31:47,805 - INFO - [OK] Segment analysis completed
+2025-07-05 17:31:47,805 - INFO - [OK] Traditional segments: 9
+2025-07-05 17:31:47,806 - INFO - [OK] Cluster-based segments: 2
+2025-07-05 17:31:47,954 - INFO - [OK] RFM segments saved to data\processed\customer_rfm_segments.csv
+2025-07-05 17:31:48,064 - INFO - [OK] Cluster segments saved to data\processed\customer_cluster_segments.csv
+2025-07-05 17:31:48,102 - INFO - [OK] Segmentation report saved to data\processed\segmentation_analysis_report.txt
+2025-07-05 17:31:48,103 - INFO - ==================================================
+2025-07-05 17:31:48,103 - INFO - CUSTOMER SEGMENTATION COMPLETED SUCCESSFULLY
+2025-07-05 17:31:48,104 - INFO - ==================================================
+2025-07-05 17:31:48,104 - INFO - [OK] Customer segmentation completed. Found 2 segments
+2025-07-05 17:31:48,105 - INFO - Step 3: Market Trends and Revenue Analysis
+2025-07-05 17:31:48,106 - INFO - ==================================================
+2025-07-05 17:31:48,106 - INFO - STARTING MARKET TRENDS ANALYSIS
+2025-07-05 17:31:48,106 - INFO - ==================================================
+2025-07-05 17:31:48,108 - INFO - Analyzing revenue trends...
+2025-07-05 17:31:48,967 - INFO - [OK] Revenue trends analysis completed
+2025-07-05 17:31:48,968 - INFO - [OK] Total revenue analyzed: £8,767,917.65
+2025-07-05 17:31:48,969 - INFO - [OK] Average daily revenue: £28,747.27
+2025-07-05 17:31:48,969 - INFO - [OK] Revenue-time correlation: 0.398
+2025-07-05 17:31:48,970 - INFO - Analyzing seasonal patterns...
+2025-07-05 17:31:49,523 - INFO - [OK] Seasonal patterns analysis completed
+2025-07-05 17:31:49,525 - INFO - [OK] Peak month: November
+2025-07-05 17:31:49,526 - INFO - [OK] Significant seasonality: True
+2025-07-05 17:31:49,529 - INFO - Analyzing product performance...
+2025-07-05 17:31:49,883 - INFO - [OK] Product performance analysis completed
+2025-07-05 17:31:49,883 - INFO - [OK] Total unique products: 3,661
+2025-07-05 17:31:49,884 - INFO - [OK] Top product: PAPER CRAFT , LITTLE BIRDIE
+2025-07-05 17:31:49,884 - INFO - [OK] Products for 80% revenue: 784 (21.4%)
+2025-07-05 17:31:49,885 - INFO - Analyzing geographic patterns...
+2025-07-05 17:31:49,986 - INFO - [OK] Geographic patterns analysis completed
+2025-07-05 17:31:49,986 - INFO - [OK] Total countries: 37
+2025-07-05 17:31:49,986 - INFO - [OK] Top country: United Kingdom
+2025-07-05 17:31:49,987 - INFO - Identifying growth opportunities...
+2025-07-05 17:31:50,042 - INFO - [OK] Growth opportunities analysis completed
+2025-07-05 17:31:50,043 - INFO - [OK] Total opportunities identified: 14
+2025-07-05 17:31:50,134 - INFO - [OK] Market analysis results saved to data\processed
+2025-07-05 17:31:50,134 - INFO - ==================================================
+2025-07-05 17:31:50,135 - INFO - MARKET TRENDS ANALYSIS COMPLETED SUCCESSFULLY
+2025-07-05 17:31:50,135 - INFO - ==================================================
+2025-07-05 17:31:50,136 - INFO - ✓ Market trends analysis completed
+2025-07-05 17:31:50,136 - INFO - Step 4: Creating Visualizations
+2025-07-05 17:31:50,137 - INFO - ==================================================
+2025-07-05 17:31:50,137 - INFO - CREATING ALL VISUALIZATIONS
+2025-07-05 17:31:50,138 - INFO - ==================================================
+2025-07-05 17:31:50,138 - INFO - Creating customer segmentation visualizations...
+2025-07-05 17:32:08,746 - INFO - [OK] Customer segmentation visualizations created
+2025-07-05 17:32:08,747 - INFO - Creating revenue trend visualizations...
+2025-07-05 17:32:09,003 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:09,006 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:09,009 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:09,012 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:09,056 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:09,059 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:11,907 - INFO - [OK] Revenue trend visualizations created
+2025-07-05 17:32:11,907 - INFO - Creating seasonal analysis visualizations...
+2025-07-05 17:32:12,148 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:12,153 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:12,196 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:12,206 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:12,214 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:12,217 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:32:12,220 - ERROR - Visualization creation failed: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (7,) and arg 1 with shape (6,).
+2025-07-05 17:32:12,222 - ERROR - Pipeline failed with error: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (7,) and arg 1 with shape (6,).
+2025-07-05 17:32:12,223 - ERROR - Main execution failed: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (7,) and arg 1 with shape (6,).
+2025-07-05 17:40:14,626 - INFO - Configuration loaded from config/config.yaml
+2025-07-05 17:40:14,627 - INFO - Project directories verified
+2025-07-05 17:40:14,629 - INFO - Retail Analysis Pipeline initialized successfully
+2025-07-05 17:40:14,629 - INFO - ============================================================
+2025-07-05 17:40:14,630 - INFO - STARTING E-COMMERCE RETAIL ANALYSIS PIPELINE
+2025-07-05 17:40:14,630 - INFO - ============================================================
+2025-07-05 17:40:14,630 - INFO - Step 1: Data Preprocessing and Cleaning
+2025-07-05 17:40:14,630 - INFO - Loading data from data/raw/online_retail.xlsx
+2025-07-05 17:41:44,302 - INFO - [OK] Raw data loaded successfully. Shape: (541909, 8)
+2025-07-05 17:41:44,302 - INFO - [OK] Columns: ['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'UnitPrice', 'CustomerID', 'Country']
+2025-07-05 17:41:44,302 - INFO - Performing data quality assessment...
+2025-07-05 17:41:45,634 - INFO - [OK] Data quality assessment completed
+2025-07-05 17:41:45,635 - INFO - Starting data cleaning process...
+2025-07-05 17:41:45,682 - INFO - [OK] Converted InvoiceDate to datetime
+2025-07-05 17:41:45,746 - INFO - [OK] Removed 135080 rows with missing CustomerID
+2025-07-05 17:41:45,796 - INFO - [OK] Removed rows with negative/zero quantities. Remaining: 397924
+2025-07-05 17:41:45,847 - INFO - [OK] Removed rows with zero/negative prices. Remaining: 397884
+2025-07-05 17:41:46,783 - INFO - Engineering additional features...
+2025-07-05 17:41:50,440 - INFO - [OK] Feature engineering completed
+2025-07-05 17:41:50,440 - INFO - [OK] Added features: Revenue, Date components, Invoice stats, Product categories
+2025-07-05 17:41:50,450 - INFO - [OK] Data cleaning completed. Final shape: (396482, 20)
+2025-07-05 17:41:50,450 - INFO - [OK] Data reduction: 26.8%
+2025-07-05 17:41:59,763 - INFO - [OK] Processed data saved to data\processed\cleaned_retail_data.csv
+2025-07-05 17:41:59,785 - INFO - [OK] Quality report saved to data\processed\data_quality_report.txt
+2025-07-05 17:42:00,398 - INFO - [OK] Summary statistics saved to data\processed\data_summary_stats.csv
+2025-07-05 17:42:00,399 - INFO - ==================================================
+2025-07-05 17:42:00,399 - INFO - DATA PROCESSING SUMMARY
+2025-07-05 17:42:00,399 - INFO - ==================================================
+2025-07-05 17:42:00,399 - INFO - Original rows: 541,909
+2025-07-05 17:42:00,401 - INFO - Processed rows: 396,482
+2025-07-05 17:42:00,407 - INFO - Data retention: 73.2%
+2025-07-05 17:42:00,416 - INFO - Unique customers: 4,335
+2025-07-05 17:42:00,432 - INFO - Unique products: 3,661
+2025-07-05 17:42:00,437 - INFO - Date range: 2010-12-01 08:26:00 to 2011-12-09 12:50:00
+2025-07-05 17:42:00,439 - INFO - Total revenue: £8,767,917.65
+2025-07-05 17:42:00,789 - INFO - ==================================================
+2025-07-05 17:42:00,823 - INFO - ✓ Data processed successfully. Shape: (396482, 20)
+2025-07-05 17:42:00,825 - INFO - Step 2: Customer Segmentation Analysis
+2025-07-05 17:42:00,827 - INFO - ==================================================
+2025-07-05 17:42:00,827 - INFO - STARTING CUSTOMER SEGMENTATION ANALYSIS
+2025-07-05 17:42:00,828 - INFO - ==================================================
+2025-07-05 17:42:00,829 - INFO - Calculating RFM metrics...
+2025-07-05 17:42:00,835 - INFO - Analysis date set to: 2011-12-10 12:50:00
+2025-07-05 17:42:02,788 - INFO - [OK] RFM metrics calculated for 4335 customers
+2025-07-05 17:42:02,791 - INFO - [OK] Recency range: 1 to 374 days
+2025-07-05 17:42:02,792 - INFO - [OK] Frequency range: 1 to 206 orders
+2025-07-05 17:42:02,794 - INFO - [OK] Monetary range: £3.75 to £279138.02
+2025-07-05 17:42:02,795 - INFO - Creating RFM quintile segments...
+2025-07-05 17:42:03,277 - INFO - [OK] RFM quintile segments created
+2025-07-05 17:42:03,278 - INFO - Performing K-means clustering analysis...
+2025-07-05 17:42:35,944 - INFO - [OK] Optimal number of clusters: 2
+2025-07-05 17:42:35,944 - INFO - [OK] Best silhouette score: 0.918
+2025-07-05 17:42:38,851 - INFO - [OK] Clustering analysis completed
+2025-07-05 17:42:38,851 - INFO - Analyzing customer segments...
+2025-07-05 17:42:39,089 - INFO - [OK] Segment analysis completed
+2025-07-05 17:42:39,090 - INFO - [OK] Traditional segments: 9
+2025-07-05 17:42:39,090 - INFO - [OK] Cluster-based segments: 2
+2025-07-05 17:42:39,248 - INFO - [OK] RFM segments saved to data\processed\customer_rfm_segments.csv
+2025-07-05 17:42:39,434 - INFO - [OK] Cluster segments saved to data\processed\customer_cluster_segments.csv
+2025-07-05 17:42:39,479 - INFO - [OK] Segmentation report saved to data\processed\segmentation_analysis_report.txt
+2025-07-05 17:42:39,479 - INFO - ==================================================
+2025-07-05 17:42:39,480 - INFO - CUSTOMER SEGMENTATION COMPLETED SUCCESSFULLY
+2025-07-05 17:42:39,480 - INFO - ==================================================
+2025-07-05 17:42:39,481 - INFO - [OK] Customer segmentation completed. Found 2 segments
+2025-07-05 17:42:39,481 - INFO - Step 3: Market Trends and Revenue Analysis
+2025-07-05 17:42:39,481 - INFO - ==================================================
+2025-07-05 17:42:39,482 - INFO - STARTING MARKET TRENDS ANALYSIS
+2025-07-05 17:42:39,482 - INFO - ==================================================
+2025-07-05 17:42:39,483 - INFO - Analyzing revenue trends...
+2025-07-05 17:42:42,285 - INFO - [OK] Revenue trends analysis completed
+2025-07-05 17:42:42,286 - INFO - [OK] Total revenue analyzed: £8,767,917.65
+2025-07-05 17:42:42,286 - INFO - [OK] Average daily revenue: £28,747.27
+2025-07-05 17:42:42,287 - INFO - [OK] Revenue-time correlation: 0.398
+2025-07-05 17:42:42,288 - INFO - Analyzing seasonal patterns...
+2025-07-05 17:42:43,173 - INFO - [OK] Seasonal patterns analysis completed
+2025-07-05 17:42:43,173 - INFO - [OK] Peak month: November
+2025-07-05 17:42:43,173 - INFO - [OK] Significant seasonality: True
+2025-07-05 17:42:43,176 - INFO - Analyzing product performance...
+2025-07-05 17:42:44,752 - INFO - [OK] Product performance analysis completed
+2025-07-05 17:42:44,752 - INFO - [OK] Total unique products: 3,661
+2025-07-05 17:42:44,754 - INFO - [OK] Top product: PAPER CRAFT , LITTLE BIRDIE
+2025-07-05 17:42:44,754 - INFO - [OK] Products for 80% revenue: 784 (21.4%)
+2025-07-05 17:42:44,755 - INFO - Analyzing geographic patterns...
+2025-07-05 17:42:44,850 - INFO - [OK] Geographic patterns analysis completed
+2025-07-05 17:42:44,906 - INFO - [OK] Total countries: 37
+2025-07-05 17:42:44,907 - INFO - [OK] Top country: United Kingdom
+2025-07-05 17:42:44,907 - INFO - Identifying growth opportunities...
+2025-07-05 17:42:44,984 - INFO - [OK] Growth opportunities analysis completed
+2025-07-05 17:42:44,984 - INFO - [OK] Total opportunities identified: 13
+2025-07-05 17:42:45,333 - INFO - [OK] Market analysis results saved to data\processed
+2025-07-05 17:42:45,335 - INFO - ==================================================
+2025-07-05 17:42:45,337 - INFO - MARKET TRENDS ANALYSIS COMPLETED SUCCESSFULLY
+2025-07-05 17:42:45,339 - INFO - ==================================================
+2025-07-05 17:42:45,340 - INFO - [OK] Market trends analysis completed
+2025-07-05 17:42:45,341 - INFO - Step 4: Creating Visualizations
+2025-07-05 17:42:45,541 - INFO - ==================================================
+2025-07-05 17:42:45,542 - INFO - CREATING ALL VISUALIZATIONS
+2025-07-05 17:42:45,543 - INFO - ==================================================
+2025-07-05 17:42:45,544 - INFO - Creating customer segmentation visualizations...
+2025-07-05 17:42:55,677 - INFO - [OK] Customer segmentation visualizations created
+2025-07-05 17:42:55,678 - INFO - Creating revenue trend visualizations...
+2025-07-05 17:42:55,927 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:55,930 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:55,935 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:55,937 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:55,969 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:55,971 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:58,325 - INFO - [OK] Revenue trend visualizations created
+2025-07-05 17:42:58,326 - INFO - Creating seasonal analysis visualizations...
+2025-07-05 17:42:58,535 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:58,536 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:58,560 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:58,563 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:58,570 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:42:58,574 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:43:00,222 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:43:00,223 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:43:01,036 - INFO - [OK] Seasonal analysis visualizations created
+2025-07-05 17:43:01,037 - INFO - Creating product performance visualizations...
+2025-07-05 17:43:04,268 - INFO - [OK] Product performance visualizations created
+2025-07-05 17:43:04,268 - INFO - Creating geographic visualizations...
+2025-07-05 17:43:06,220 - INFO - [OK] Geographic visualizations created
+2025-07-05 17:43:06,220 - INFO - Creating executive summary visualization...
+2025-07-05 17:43:06,503 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:43:06,505 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:43:06,522 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:43:06,523 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-07-05 17:43:09,123 - INFO - [OK] Executive summary visualization created
+2025-07-05 17:43:09,123 - INFO - ==================================================
+2025-07-05 17:43:09,124 - INFO - ALL VISUALIZATIONS CREATED SUCCESSFULLY
+2025-07-05 17:43:09,124 - INFO - ==================================================
+2025-07-05 17:43:09,124 - INFO - ✓ All visualizations created
+2025-07-05 17:43:09,125 - INFO - Step 5: Generating Reports
+2025-07-05 17:43:09,839 - INFO - ==================================================
+2025-07-05 17:43:09,840 - INFO - GENERATING ALL REPORTS
+2025-07-05 17:43:09,841 - INFO - ==================================================
+2025-07-05 17:43:10,151 - INFO - Generating executive summary report...
+2025-07-05 17:43:12,619 - INFO - [OK] Executive summary saved to outputs\reports\executive_summary.html
+2025-07-05 17:43:12,620 - INFO - Generating technical analysis report...
+2025-07-05 17:43:13,234 - INFO - [OK] Technical report saved to outputs\reports\technical_report.html
+2025-07-05 17:43:13,236 - INFO - Generating methodology documentation...
+2025-07-05 17:43:13,314 - INFO - [OK] Methodology documentation saved to outputs\reports\methodology_documentation.md
+2025-07-05 17:43:13,315 - INFO - ==================================================
+2025-07-05 17:43:13,316 - INFO - ALL REPORTS GENERATED SUCCESSFULLY
+2025-07-05 17:43:13,317 - INFO - ==================================================
+2025-07-05 17:43:13,317 - INFO - ✓ All reports generated
+2025-07-05 17:43:13,318 - INFO - Step 6: Creating Interactive Dashboard
+2025-07-05 17:43:13,319 - INFO - Creating interactive dashboard...
+2025-07-05 17:43:20,812 - INFO - [OK] Interactive dashboard created: outputs\dashboards\retail_analytics_dashboard.html
+2025-07-05 17:43:20,812 - INFO - [OK] Interactive dashboard creation completed
+2025-07-05 17:43:20,813 - INFO - ✓ Interactive dashboard created
+2025-07-05 17:43:20,813 - INFO - ============================================================
+2025-07-05 17:43:20,813 - INFO - ANALYSIS PIPELINE COMPLETED SUCCESSFULLY!
+2025-07-05 17:43:20,814 - INFO - ============================================================

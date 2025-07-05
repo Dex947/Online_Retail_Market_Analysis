@@ -1,0 +1,19 @@
+E-COMMERCE DATA QUALITY ASSESSMENT REPORT
+==================================================
+
+Generated: 2025-07-05 17:41:59
+
+Total Rows: 541909
+Total Columns: 8
+Missing Values: {'InvoiceNo': 0, 'StockCode': 0, 'Description': 1454, 'Quantity': 0, 'InvoiceDate': 0, 'UnitPrice': 0, 'CustomerID': 135080, 'Country': 0}
+Duplicate Rows: 5268
+Data Types: {'InvoiceNo': dtype('O'), 'StockCode': dtype('O'), 'Description': dtype('O'), 'Quantity': dtype('int64'), 'InvoiceDate': dtype('<M8[ns]'), 'UnitPrice': dtype('float64'), 'CustomerID': dtype('float64'), 'Country': dtype('O')}
+Memory Usage: 126.1811933517456
+Negative Quantities: 10624
+Zero Quantities: 0
+Negative Prices: 2
+Zero Prices: 2515
+Date Range: {'start_date': Timestamp('2010-12-01 08:26:00'), 'end_date': Timestamp('2011-12-09 12:50:00'), 'date_span_days': 373}
+Unique Customers: 4372
+Missing Customer Ids: 135080
+Unique Products: 4070
