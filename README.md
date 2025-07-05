@@ -270,24 +270,6 @@ config = {
 - **Correlation analysis** for revenue drivers identification
 - **Holiday effect quantification** with statistical significance
 
-## 📊 Sample Results
-
-### Customer Segments Identified
-| Segment | Customers | Revenue Share | Avg Order Value | Strategy |
-|---------|-----------|---------------|-----------------|----------|
-| VIP Champions | 324 (8%) | 35% | £315 | Retention & Rewards |
-| Loyal Customers | 892 (22%) | 28% | £156 | Cross-sell & Upsell |
-| Promising | 1,247 (31%) | 22% | £87 | Development Programs |
-| At Risk | 1,583 (39%) | 15% | £45 | Re-engagement Campaigns |
-
-### Seasonal Performance
-| Month | Revenue | Seasonality Index | Performance |
-|-------|---------|-------------------|-------------|
-| December | £502,614 | 145% | Peak Season |
-| November | £423,287 | 122% | High Season |
-| October | £378,952 | 109% | Above Average |
-| September | £301,445 | 87% | Below Average |
-
 ## 🚀 Future Enhancements
 
 ### Advanced Analytics
